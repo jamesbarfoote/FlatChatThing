@@ -9,14 +9,16 @@ public class Main {
 	private static boolean run = false;
 	  public static void main(String[] args) throws IOException {
 		           try{
+		        	   GUI g = new GUI();
 		        	   final int PORT = 6677;//Our port
 		        	   ServerSocket server = new ServerSocket(PORT);//Bind the port
+		        	   g.getTextOutputArea().append("Waiting for clients...\n");
 		        	   System.out.println("Waiting for clients...");
 		        	   
 		        	   while(run)//While the program is running do this
 		        	   {
 		        		   Socket s = server.accept();//Client that has connected to us
-		   				
+		        		   g.getTextOutputArea().append("Client connected from " + s.getLocalAddress().getHostName());
 		        		   System.out.println("Client connected from " + s.getLocalAddress().getHostName());	
 		        		   				
 		        		   Client chat = new Client(s);//new client object
