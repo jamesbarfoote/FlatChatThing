@@ -6,7 +6,7 @@ import java.net.SocketAddress;
 import java.util.ArrayList;
 
 public class Main {
-	private static boolean run = false;
+	private static boolean run = true;
 	  public static void main(String[] args) throws IOException {
 		           try{
 		        	   GUI g = new GUI();
