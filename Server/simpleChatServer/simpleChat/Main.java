@@ -18,8 +18,8 @@ public class Main {
 		        	   while(true)//While the program is running do this
 		        	   {
 		        		   Socket s = server.accept();//Client that has connected to us
-		        		   g.getTextOutputArea().append("Client connected from " + s.getLocalAddress().getHostName());
-		        		   System.out.println("Client connected from " + s.getLocalAddress().getHostName());	
+		        		   g.getTextOutputArea().append("Client connected from \n" + s.getLocalAddress().getHostName());
+		        		   System.out.println("Client connected from \n" + s.getLocalAddress().getHostName());	
 		        		   				
 		        		   Client chat = new Client(s);//new client object
 		        		   Thread t = new Thread(chat);
