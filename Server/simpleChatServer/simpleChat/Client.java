@@ -22,15 +22,12 @@ public class Client implements Runnable{
 			PrintWriter out = new PrintWriter(socket.getOutputStream());//GET THE SOCKETS OUTPUT STREAM (THE STREAM YOU WILL SEND INFORMATION TO THEM FROM)
 			
 			while (true)//WHILE THE PROGRAM IS RUNNING
-			{		
-				if (in.hasNext())
-				{
+			{	
 					String input = in.nextLine();//IF THERE IS INPUT THEN MAKE A NEW VARIABLE input AND READ WHAT THEY TYPED
 					System.out.println("Client Said: " + input);//PRINT IT OUT TO THE SCREEN
 					out.println("You Said: " + input);//RESEND IT TO THE CLIENT
 					out.flush();//FLUSH THE STREAM
 				}
-			}
 		} 
 		catch (Exception e)
 		{

@@ -15,7 +15,7 @@ public class Main {
 		        	   g.getTextOutputArea().append("Waiting for clients...\n");
 		        	   System.out.println("Waiting for clients...");
 		        	   
-		        	   while(run)//While the program is running do this
+		        	   while(true)//While the program is running do this
 		        	   {
 		        		   Socket s = server.accept();//Client that has connected to us
 		        		   g.getTextOutputArea().append("Client connected from " + s.getLocalAddress().getHostName());
